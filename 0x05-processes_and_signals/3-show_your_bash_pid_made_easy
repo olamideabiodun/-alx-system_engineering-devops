@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Iterate through directories in /proc
+for pid_dir in /proc/*/; do
+    pid=$(basename "$pid_dir")
+    
+    # Check if the process name contains "bash"
+    if grep -q "bash" "$pid_dir/cmdline" 2>/dev/null; then
+        process_name=$(tr -d '\0' < "$pid_dir/cmdline")
+        echo "PID: $pid, Process Name: $process_name"
+    fi
+done
