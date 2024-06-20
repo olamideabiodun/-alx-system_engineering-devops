@@ -23,9 +23,9 @@ if __name__ == "__main__":
             all_tasks.append(t)
             if t.get("completed") is True:
                 numb += 1
-    print("Employee {} is done with tasks ({}/{})".format(users, numb,
+    print("Employee {} is done with tasks ({}/{}):".format(users, numb,
                                                           (len(all_tasks))))
     for t in all_tasks:
         if t.get("completed") is True:
             title = t.get("title")
-            print(title)
+            print(f"\t{title}")
