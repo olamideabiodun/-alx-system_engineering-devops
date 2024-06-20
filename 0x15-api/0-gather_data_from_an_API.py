@@ -3,7 +3,6 @@
 """imports urllib.request to use the request module,
     imports the json to jsonify the fetched data"""
 import requests
-import json
 import sys
 
 
@@ -24,7 +23,7 @@ if __name__ == "__main__":
             if t.get("completed") is True:
                 numb += 1
     print("Employee {} is done with tasks ({}/{}):".format(users, numb,
-                                                          (len(all_tasks))))
+                                                           (len(all_tasks))))
     for t in all_tasks:
         if t.get("completed") is True:
             title = t.get("title")
