@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-## imports urllib.request to use the request module, imports the json to jsonify the fetched data
+"""imports urllib.request to use the request module, imports the json to jsonify the fetched data"""
 import requests
 import json
 import sys
