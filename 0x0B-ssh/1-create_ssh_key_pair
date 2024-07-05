@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # create RSA key
 
-ssh-keygen -f school -b 4096 -N "betty"
+ssh-keygen -f school -b 4096 -N betty
 
